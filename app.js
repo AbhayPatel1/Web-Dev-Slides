@@ -39,10 +39,19 @@ for(let i=0;i<js.length;i++){
 }
 
 
-const dismiss = document.querySelector('#alert1');
+const appearalert = document.querySelector('#submit1');
+const alert1 = document.querySelector('#alert1');
+const input1 = document.querySelector('#input1');
+const closealert = document.querySelector('#closealert');
 
-dismiss.addEventListener('click',() => {
-    dismiss.hidden = false;
+appearalert.addEventListener('click',(e) => {
+  e.preventDefault();
+  input1.value = "";
+    alert1.hidden = false;  
+
 }
- 
  )
+
+ closealert.addEventListener('click', ()=>{
+     alert1.hidden = true;
+ })
